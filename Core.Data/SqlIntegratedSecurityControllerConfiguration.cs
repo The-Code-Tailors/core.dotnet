@@ -25,11 +25,11 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlIntegratedSecurityControllerConfiguration GetDefault()
         {
-            var hostname = Settings.SqlIntegratedSecurityControllerConfiguration.Hostname;
-            var database = Settings.SqlIntegratedSecurityControllerConfiguration.Database;
+            var hostname = Settings.Instance.SqlIntegratedSecurityControllerConfiguration.Hostname;
+            var database = Settings.Instance.SqlIntegratedSecurityControllerConfiguration.Database;
             var configuration = new SqlIntegratedSecurityControllerConfiguration(hostname, database);
 
-            configuration.EnableDiagnosticMode = Settings.SqlIntegratedSecurityControllerConfiguration.EnableDiagnosticMode;
+            configuration.EnableDiagnosticMode = Settings.Instance.SqlIntegratedSecurityControllerConfiguration.EnableDiagnosticMode;
 
             return configuration;
         }

@@ -24,7 +24,7 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlLocalDBControllerConfiguration GetDefault()
         {
-            var path = Settings.SqlLocalDBControllerConfiguration.Path;
+            var path = Settings.Instance.SqlLocalDBControllerConfiguration.Path;
             var configuration = new SqlLocalDBControllerConfiguration(path);
             return configuration;
         }

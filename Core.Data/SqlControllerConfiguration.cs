@@ -33,13 +33,13 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlControllerConfiguration GetDefault()
         {
-            var hostname = Settings.SqlControllerConfiguration.Hostname;
-            var username = Settings.SqlControllerConfiguration.Username;
-            var password = Settings.SqlControllerConfiguration.Password;
-            var database = Settings.SqlControllerConfiguration.Database;
+            var hostname = Settings.Instance.SqlControllerConfiguration.Hostname;
+            var username = Settings.Instance.SqlControllerConfiguration.Username;
+            var password = Settings.Instance.SqlControllerConfiguration.Password;
+            var database = Settings.Instance.SqlControllerConfiguration.Database;
             var configuration = new SqlControllerConfiguration(hostname, username, password, database);
 
-            configuration.EnableDiagnosticMode = Settings.SqlControllerConfiguration.EnableDiagnosticMode;
+            configuration.EnableDiagnosticMode = Settings.Instance.SqlControllerConfiguration.EnableDiagnosticMode;
 
             return configuration;
         }

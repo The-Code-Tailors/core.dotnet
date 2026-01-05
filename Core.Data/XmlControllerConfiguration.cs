@@ -15,7 +15,7 @@ namespace com.fabioscagliola.Core.Data
 
         public static XmlControllerConfiguration GetDefault()
         {
-            return new XmlControllerConfiguration(Settings.XmlControllerConfiguration.Path);
+            return new XmlControllerConfiguration(Settings.Instance.XmlControllerConfiguration.Path);
         }
 
     }

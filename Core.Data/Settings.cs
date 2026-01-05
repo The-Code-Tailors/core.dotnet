@@ -50,9 +50,9 @@ public class Settings
         }
     }
 
-    public static EntitySettings Entity { get; set; }
-    public static SqlControllerConfigurationSettings SqlControllerConfiguration { get; set; }
-    public static SqlIntegratedSecurityControllerConfigurationSettings SqlIntegratedSecurityControllerConfiguration { get; set; }
-    public static SqlLocalDBControllerConfigurationSettings SqlLocalDBControllerConfiguration { get; set; }
-    public static XmlControllerConfigurationSettings XmlControllerConfiguration { get; set; }
+    public EntitySettings Entity { get; set; }
+    public SqlControllerConfigurationSettings SqlControllerConfiguration { get; set; }
+    public SqlIntegratedSecurityControllerConfigurationSettings SqlIntegratedSecurityControllerConfiguration { get; set; }
+    public SqlLocalDBControllerConfigurationSettings SqlLocalDBControllerConfiguration { get; set; }
+    public XmlControllerConfigurationSettings XmlControllerConfiguration { get; set; }
 }
