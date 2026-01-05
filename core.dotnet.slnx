@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Core.Data.Test/Core.Data.Test.csproj" />
   <Project Path="Core.Data/Core.Data.csproj" />
+  <Project Path="Core.DataAccess.Test/Core.DataAccess.Test.csproj" />
+  <Project Path="Core.DataAccess/Core.DataAccess.csproj" />
 </Solution>

@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyVersion>12.0</AssemblyVersion>
+        <Authors>Fabio Scagliola</Authors>
+        <Copyright>Fabio Scagliola 2013</Copyright>
+        <Description>The Core.DataAccess library constitutes the data access layer of my framework</Description>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <FileVersion>$(AssemblyVersion)</FileVersion>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+        <Nullable>enable</Nullable>
+        <Product>Core.DataAccess</Product>
+        <RootNamespace>com.fabioscagliola.Core.DataAccess</RootNamespace>
+        <TargetFramework>net10.0</TargetFramework>
+        <Title>Core.DataAccess</Title>
+        <Version>$(AssemblyVersion)</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Core.Data\Core.Data.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.3"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+            <DesignTime>True</DesignTime>
+        </Compile>
+    </ItemGroup>
+
+</Project>
