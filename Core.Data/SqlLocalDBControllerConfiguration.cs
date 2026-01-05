@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace com.fabioscagliola.Core.Data
 {
@@ -24,9 +24,8 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlLocalDBControllerConfiguration GetDefault()
         {
-            AppSettingsReader appSettingsReader = new AppSettingsReader();
-            string path = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlLocalDBControllerConfiguration.Path", typeof(string));
-            SqlLocalDBControllerConfiguration configuration = new SqlLocalDBControllerConfiguration(path);
+            var path = Settings.SqlLocalDBControllerConfiguration.Path;
+            var configuration = new SqlLocalDBControllerConfiguration(path);
             return configuration;
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.IO;
 using System.Linq;
 
@@ -33,19 +33,13 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlControllerConfiguration GetDefault()
         {
-            AppSettingsReader appSettingsReader = new AppSettingsReader();
-            string hostname = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlControllerConfiguration.Hostname", typeof(string));
-            string username = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlControllerConfiguration.Username", typeof(string));
-            string password = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlControllerConfiguration.Password", typeof(string));
-            string database = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlControllerConfiguration.Database", typeof(string));
-            SqlControllerConfiguration configuration = new SqlControllerConfiguration(hostname, username, password, database);
+            var hostname = Settings.SqlControllerConfiguration.Hostname;
+            var username = Settings.SqlControllerConfiguration.Username;
+            var password = Settings.SqlControllerConfiguration.Password;
+            var database = Settings.SqlControllerConfiguration.Database;
+            var configuration = new SqlControllerConfiguration(hostname, username, password, database);
 
-            const string ENABLEDIAGNOSTICMODE = "com.fabioscagliola.Core.Data.SqlControllerConfiguration.EnableDiagnosticMode";
-
-            if (ConfigurationManager.AppSettings.AllKeys.Contains(ENABLEDIAGNOSTICMODE))
-            {
-                configuration.EnableDiagnosticMode = (bool)appSettingsReader.GetValue(ENABLEDIAGNOSTICMODE, typeof(bool));
-            }
+            configuration.EnableDiagnosticMode = Settings.SqlControllerConfiguration.EnableDiagnosticMode;
 
             return configuration;
         }

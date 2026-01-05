@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.IO;
 using System.Linq;
 
@@ -25,17 +25,11 @@ namespace com.fabioscagliola.Core.Data
 
         public static SqlIntegratedSecurityControllerConfiguration GetDefault()
         {
-            AppSettingsReader appSettingsReader = new AppSettingsReader();
-            string hostname = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlIntegratedSecurityControllerConfiguration.Hostname", typeof(string));
-            string database = (string)appSettingsReader.GetValue("com.fabioscagliola.Core.Data.SqlIntegratedSecurityControllerConfiguration.Database", typeof(string));
-            SqlIntegratedSecurityControllerConfiguration configuration = new SqlIntegratedSecurityControllerConfiguration(hostname, database);
+            var hostname = Settings.SqlIntegratedSecurityControllerConfiguration.Hostname;
+            var database = Settings.SqlIntegratedSecurityControllerConfiguration.Database;
+            var configuration = new SqlIntegratedSecurityControllerConfiguration(hostname, database);
 
-            const string ENABLEDIAGNOSTICMODE = "com.fabioscagliola.Core.Data.SqlIntegratedSecurityControllerConfiguration.EnableDiagnosticMode";
-
-            if (ConfigurationManager.AppSettings.AllKeys.Contains(ENABLEDIAGNOSTICMODE))
-            {
-                configuration.EnableDiagnosticMode = (bool)appSettingsReader.GetValue(ENABLEDIAGNOSTICMODE, typeof(bool));
-            }
+            configuration.EnableDiagnosticMode = Settings.SqlIntegratedSecurityControllerConfiguration.EnableDiagnosticMode;
 
             return configuration;
         }
