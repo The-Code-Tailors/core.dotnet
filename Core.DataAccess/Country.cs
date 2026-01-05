@@ -1,0 +1,330 @@
+﻿using System.Collections.Generic;
+
+namespace com.fabioscagliola.Core.DataAccess
+{
+    public class Country
+    {
+        /// <summary>
+        /// ISO 3166-1 alpha-2 country code 
+        /// </summary>
+        public string Code { get; protected set; }
+        /// <summary>
+        /// ISO 3166-1 alpha-3 country code 
+        /// </summary>
+        public string Code3 { get; protected set; }
+        /// <summary>
+        /// AF (Africa),
+        /// AN (Antarctica),
+        /// AS (Asia),
+        /// EU (Europe),
+        /// NA (North America),
+        /// OC (Oceania),
+        /// SA (South America),
+        /// </summary>
+        public string ContinentCode { get; protected set; }
+        /// <summary>
+        /// English country name 
+        /// </summary>
+        public string Name { get; protected set; }
+        /// <summary>
+        /// English country name (short) 
+        /// </summary>
+        public string ShortName
+        {
+            get
+            {
+                string name = Name;
+
+                if (name.Contains(","))
+                {
+                    name = name.Substring(0, name.IndexOf(","));
+                }
+
+                return name;
+            }
+        }
+        /// <summary>
+        /// ISO 3166-1 numeric country code 
+        /// </summary>
+        public int Number { get; protected set; }
+
+        protected static List<Country> countryList;
+
+        static Country()
+        {
+            countryList = new List<Country>()
+            {
+                new Country() { Code = "AF", Code3 = "AFG", ContinentCode = "AS", Name = "Afghanistan, Islamic Republic of", Number = 4, },
+                new Country() { Code = "AX", Code3 = "ALA", ContinentCode = "EU", Name = "Åland Islands", Number = 248, },
+                new Country() { Code = "AL", Code3 = "ALB", ContinentCode = "EU", Name = "Albania, Republic of", Number = 8, },
+                new Country() { Code = "DZ", Code3 = "DZA", ContinentCode = "AF", Name = "Algeria, People's Democratic Republic of", Number = 12, },
+                new Country() { Code = "AS", Code3 = "ASM", ContinentCode = "OC", Name = "American Samoa", Number = 16, },
+                new Country() { Code = "AD", Code3 = "AND", ContinentCode = "EU", Name = "Andorra, Principality of", Number = 20, },
+                new Country() { Code = "AO", Code3 = "AGO", ContinentCode = "AF", Name = "Angola, Republic of", Number = 24, },
+                new Country() { Code = "AI", Code3 = "AIA", ContinentCode = "NA", Name = "Anguilla", Number = 660, },
+                new Country() { Code = "AQ", Code3 = "ATA", ContinentCode = "AN", Name = "Antarctica (the territory South of 60 deg S)", Number = 10, },
+                new Country() { Code = "AG", Code3 = "ATG", ContinentCode = "NA", Name = "Antigua and Barbuda", Number = 28, },
+                new Country() { Code = "AR", Code3 = "ARG", ContinentCode = "SA", Name = "Argentina, Argentine Republic", Number = 32, },
+                new Country() { Code = "AM", Code3 = "ARM", ContinentCode = "EU", Name = "Armenia, Republic of", Number = 51, },
+                //new Country() { Code = "AM", Code3 = "ARM", ContinentCode = "AS", Name = "Armenia, Republic of", Number = 51, },
+                new Country() { Code = "AW", Code3 = "ABW", ContinentCode = "NA", Name = "Aruba", Number = 533, },
+                new Country() { Code = "AU", Code3 = "AUS", ContinentCode = "OC", Name = "Australia, Commonwealth of", Number = 36, },
+                new Country() { Code = "AT", Code3 = "AUT", ContinentCode = "EU", Name = "Austria, Republic of", Number = 40, },
+                new Country() { Code = "AZ", Code3 = "AZE", ContinentCode = "EU", Name = "Azerbaijan, Republic of", Number = 31, },
+                //new Country() { Code = "AZ", Code3 = "AZE", ContinentCode = "AS", Name = "Azerbaijan, Republic of", Number = 31, },
+                new Country() { Code = "BS", Code3 = "BHS", ContinentCode = "NA", Name = "Bahamas, Commonwealth of the", Number = 44, },
+                new Country() { Code = "BH", Code3 = "BHR", ContinentCode = "AS", Name = "Bahrain, Kingdom of", Number = 48, },
+                new Country() { Code = "BD", Code3 = "BGD", ContinentCode = "AS", Name = "Bangladesh, People's Republic of", Number = 50, },
+                new Country() { Code = "BB", Code3 = "BRB", ContinentCode = "NA", Name = "Barbados", Number = 52, },
+                new Country() { Code = "BY", Code3 = "BLR", ContinentCode = "EU", Name = "Belarus, Republic of", Number = 112, },
+                new Country() { Code = "BE", Code3 = "BEL", ContinentCode = "EU", Name = "Belgium, Kingdom of", Number = 56, },
+                new Country() { Code = "BZ", Code3 = "BLZ", ContinentCode = "NA", Name = "Belize", Number = 84, },
+                new Country() { Code = "BJ", Code3 = "BEN", ContinentCode = "AF", Name = "Benin, Republic of", Number = 204, },
+                new Country() { Code = "BM", Code3 = "BMU", ContinentCode = "NA", Name = "Bermuda", Number = 60, },
+                new Country() { Code = "BT", Code3 = "BTN", ContinentCode = "AS", Name = "Bhutan, Kingdom of", Number = 64, },
+                new Country() { Code = "BO", Code3 = "BOL", ContinentCode = "SA", Name = "Bolivia, Republic of", Number = 68, },
+                new Country() { Code = "BQ", Code3 = "BES", ContinentCode = "NA", Name = "Bonaire, Sint Eustatius and Saba", Number = 535, },
+                new Country() { Code = "BA", Code3 = "BIH", ContinentCode = "EU", Name = "Bosnia and Herzegovina", Number = 70, },
+                new Country() { Code = "BW", Code3 = "BWA", ContinentCode = "AF", Name = "Botswana, Republic of", Number = 72, },
+                new Country() { Code = "BV", Code3 = "BVT", ContinentCode = "AN", Name = "Bouvet Island (Bouvetoya)", Number = 74, },
+                new Country() { Code = "BR", Code3 = "BRA", ContinentCode = "SA", Name = "Brazil, Federative Republic of", Number = 76, },
+                new Country() { Code = "IO", Code3 = "IOT", ContinentCode = "AS", Name = "British Indian Ocean Territory (Chagos Archipelago)", Number = 86, },
+                new Country() { Code = "VG", Code3 = "VGB", ContinentCode = "NA", Name = "British Virgin Islands", Number = 92, },
+                new Country() { Code = "BN", Code3 = "BRN", ContinentCode = "AS", Name = "Brunei Darussalam", Number = 96, },
+                new Country() { Code = "BG", Code3 = "BGR", ContinentCode = "EU", Name = "Bulgaria, Republic of", Number = 100, },
+                new Country() { Code = "BF", Code3 = "BFA", ContinentCode = "AF", Name = "Burkina Faso", Number = 854, },
+                new Country() { Code = "BI", Code3 = "BDI", ContinentCode = "AF", Name = "Burundi, Republic of", Number = 108, },
+                new Country() { Code = "KH", Code3 = "KHM", ContinentCode = "AS", Name = "Cambodia, Kingdom of", Number = 116, },
+                new Country() { Code = "CM", Code3 = "CMR", ContinentCode = "AF", Name = "Cameroon, Republic of", Number = 120, },
+                new Country() { Code = "CA", Code3 = "CAN", ContinentCode = "NA", Name = "Canada", Number = 124, },
+                new Country() { Code = "CV", Code3 = "CPV", ContinentCode = "AF", Name = "Cape Verde, Republic of", Number = 132, },
+                new Country() { Code = "KY", Code3 = "CYM", ContinentCode = "NA", Name = "Cayman Islands", Number = 136, },
+                new Country() { Code = "CF", Code3 = "CAF", ContinentCode = "AF", Name = "Central African Republic", Number = 140, },
+                new Country() { Code = "TD", Code3 = "TCD", ContinentCode = "AF", Name = "Chad, Republic of", Number = 148, },
+                new Country() { Code = "CL", Code3 = "CHL", ContinentCode = "SA", Name = "Chile, Republic of", Number = 152, },
+                new Country() { Code = "CN", Code3 = "CHN", ContinentCode = "AS", Name = "China, People's Republic of", Number = 156, },
+                new Country() { Code = "CX", Code3 = "CXR", ContinentCode = "AS", Name = "Christmas Island", Number = 162, },
+                new Country() { Code = "CC", Code3 = "CCK", ContinentCode = "AS", Name = "Cocos (Keeling) Islands", Number = 166, },
+                new Country() { Code = "CO", Code3 = "COL", ContinentCode = "SA", Name = "Colombia, Republic of", Number = 170, },
+                new Country() { Code = "KM", Code3 = "COM", ContinentCode = "AF", Name = "Comoros, Union of the", Number = 174, },
+                new Country() { Code = "CD", Code3 = "COD", ContinentCode = "AF", Name = "Congo (Democratic Republic of the)", Number = 180, },
+                new Country() { Code = "CG", Code3 = "COG", ContinentCode = "AF", Name = "Congo (Republic of the)", Number = 178, },
+                new Country() { Code = "CK", Code3 = "COK", ContinentCode = "OC", Name = "Cook Islands", Number = 184, },
+                new Country() { Code = "CR", Code3 = "CRI", ContinentCode = "NA", Name = "Costa Rica, Republic of", Number = 188, },
+                new Country() { Code = "CI", Code3 = "CIV", ContinentCode = "AF", Name = "Cote d'Ivoire, Republic of", Number = 384, },
+                new Country() { Code = "HR", Code3 = "HRV", ContinentCode = "EU", Name = "Croatia, Republic of", Number = 191, },
+                new Country() { Code = "CU", Code3 = "CUB", ContinentCode = "NA", Name = "Cuba, Republic of", Number = 192, },
+                new Country() { Code = "CW", Code3 = "CUW", ContinentCode = "NA", Name = "Curaçao", Number = 531, },
+                new Country() { Code = "CY", Code3 = "CYP", ContinentCode = "EU", Name = "Cyprus, Republic of", Number = 196, },
+                //new Country() { Code = "CY", Code3 = "CYP", ContinentCode = "AS", Name = "Cyprus, Republic of", Number = 196, },
+                new Country() { Code = "CZ", Code3 = "CZE", ContinentCode = "EU", Name = "Czech Republic", Number = 203, },
+                new Country() { Code = "DK", Code3 = "DNK", ContinentCode = "EU", Name = "Denmark, Kingdom of", Number = 208, },
+                new Country() { Code = "DJ", Code3 = "DJI", ContinentCode = "AF", Name = "Djibouti, Republic of", Number = 262, },
+                new Country() { Code = "DM", Code3 = "DMA", ContinentCode = "NA", Name = "Dominica, Commonwealth of", Number = 212, },
+                new Country() { Code = "DO", Code3 = "DOM", ContinentCode = "NA", Name = "Dominican Republic", Number = 214, },
+                new Country() { Code = "EC", Code3 = "ECU", ContinentCode = "SA", Name = "Ecuador, Republic of", Number = 218, },
+                new Country() { Code = "EG", Code3 = "EGY", ContinentCode = "AF", Name = "Egypt, Arab Republic of", Number = 818, },
+                new Country() { Code = "SV", Code3 = "SLV", ContinentCode = "NA", Name = "El Salvador, Republic of", Number = 222, },
+                new Country() { Code = "GQ", Code3 = "GNQ", ContinentCode = "AF", Name = "Equatorial Guinea, Republic of", Number = 226, },
+                new Country() { Code = "ER", Code3 = "ERI", ContinentCode = "AF", Name = "Eritrea, State of", Number = 232, },
+                new Country() { Code = "EE", Code3 = "EST", ContinentCode = "EU", Name = "Estonia, Republic of", Number = 233, },
+                new Country() { Code = "ET", Code3 = "ETH", ContinentCode = "AF", Name = "Ethiopia, Federal Democratic Republic of", Number = 231, },
+                new Country() { Code = "FK", Code3 = "FLK", ContinentCode = "SA", Name = "Falkland Islands (Malvinas)", Number = 238, },
+                new Country() { Code = "FO", Code3 = "FRO", ContinentCode = "EU", Name = "Faroe Islands", Number = 234, },
+                new Country() { Code = "FJ", Code3 = "FJI", ContinentCode = "OC", Name = "Fiji, Republic of the Fiji Islands", Number = 242, },
+                new Country() { Code = "FI", Code3 = "FIN", ContinentCode = "EU", Name = "Finland, Republic of", Number = 246, },
+                new Country() { Code = "FR", Code3 = "FRA", ContinentCode = "EU", Name = "France, French Republic", Number = 250, },
+                new Country() { Code = "GF", Code3 = "GUF", ContinentCode = "SA", Name = "French Guiana", Number = 254, },
+                new Country() { Code = "PF", Code3 = "PYF", ContinentCode = "OC", Name = "French Polynesia", Number = 258, },
+                new Country() { Code = "TF", Code3 = "ATF", ContinentCode = "AN", Name = "French Southern Territories", Number = 260, },
+                new Country() { Code = "GA", Code3 = "GAB", ContinentCode = "AF", Name = "Gabon, Gabonese Republic", Number = 266, },
+                new Country() { Code = "GM", Code3 = "GMB", ContinentCode = "AF", Name = "Gambia, Republic of the", Number = 270, },
+                new Country() { Code = "GE", Code3 = "GEO", ContinentCode = "EU", Name = "Georgia", Number = 268, },
+                //new Country() { Code = "GE", Code3 = "GEO", ContinentCode = "AS", Name = "Georgia", Number = 268, },
+                new Country() { Code = "DE", Code3 = "DEU", ContinentCode = "EU", Name = "Germany, Federal Republic of", Number = 276, },
+                new Country() { Code = "GH", Code3 = "GHA", ContinentCode = "AF", Name = "Ghana, Republic of", Number = 288, },
+                new Country() { Code = "GI", Code3 = "GIB", ContinentCode = "EU", Name = "Gibraltar", Number = 292, },
+                new Country() { Code = "GR", Code3 = "GRC", ContinentCode = "EU", Name = "Greece, Hellenic Republic", Number = 300, },
+                new Country() { Code = "GL", Code3 = "GRL", ContinentCode = "NA", Name = "Greenland", Number = 304, },
+                new Country() { Code = "GD", Code3 = "GRD", ContinentCode = "NA", Name = "Grenada", Number = 308, },
+                new Country() { Code = "GP", Code3 = "GLP", ContinentCode = "NA", Name = "Guadeloupe", Number = 312, },
+                new Country() { Code = "GU", Code3 = "GUM", ContinentCode = "OC", Name = "Guam", Number = 316, },
+                new Country() { Code = "GT", Code3 = "GTM", ContinentCode = "NA", Name = "Guatemala, Republic of", Number = 320, },
+                new Country() { Code = "GG", Code3 = "GGY", ContinentCode = "EU", Name = "Guernsey, Bailiwick of", Number = 831, },
+                new Country() { Code = "GN", Code3 = "GIN", ContinentCode = "AF", Name = "Guinea, Republic of", Number = 324, },
+                new Country() { Code = "GW", Code3 = "GNB", ContinentCode = "AF", Name = "Guinea-Bissau, Republic of", Number = 624, },
+                new Country() { Code = "GY", Code3 = "GUY", ContinentCode = "SA", Name = "Guyana, Co-operative Republic of", Number = 328, },
+                new Country() { Code = "HT", Code3 = "HTI", ContinentCode = "NA", Name = "Haiti, Republic of", Number = 332, },
+                new Country() { Code = "HM", Code3 = "HMD", ContinentCode = "AN", Name = "Heard Island and McDonald Islands", Number = 334, },
+                new Country() { Code = "VA", Code3 = "VAT", ContinentCode = "EU", Name = "Holy See (Vatican City State)", Number = 336, },
+                new Country() { Code = "HN", Code3 = "HND", ContinentCode = "NA", Name = "Honduras, Republic of", Number = 340, },
+                new Country() { Code = "HK", Code3 = "HKG", ContinentCode = "AS", Name = "Hong Kong, Special Administrative Region of China", Number = 344, },
+                new Country() { Code = "HU", Code3 = "HUN", ContinentCode = "EU", Name = "Hungary, Republic of", Number = 348, },
+                new Country() { Code = "IS", Code3 = "ISL", ContinentCode = "EU", Name = "Iceland, Republic of", Number = 352, },
+                new Country() { Code = "IN", Code3 = "IND", ContinentCode = "AS", Name = "India, Republic of", Number = 356, },
+                new Country() { Code = "ID", Code3 = "IDN", ContinentCode = "AS", Name = "Indonesia, Republic of", Number = 360, },
+                new Country() { Code = "IR", Code3 = "IRN", ContinentCode = "AS", Name = "Iran, Islamic Republic of", Number = 364, },
+                new Country() { Code = "IQ", Code3 = "IRQ", ContinentCode = "AS", Name = "Iraq, Republic of", Number = 368, },
+                new Country() { Code = "IE", Code3 = "IRL", ContinentCode = "EU", Name = "Ireland", Number = 372, },
+                new Country() { Code = "IM", Code3 = "IMN", ContinentCode = "EU", Name = "Isle of Man", Number = 833, },
+                new Country() { Code = "IL", Code3 = "ISR", ContinentCode = "AS", Name = "Israel, State of", Number = 376, },
+                new Country() { Code = "IT", Code3 = "ITA", ContinentCode = "EU", Name = "Italy, Italian Republic", Number = 380, },
+                new Country() { Code = "JM", Code3 = "JAM", ContinentCode = "NA", Name = "Jamaica", Number = 388, },
+                new Country() { Code = "JP", Code3 = "JPN", ContinentCode = "AS", Name = "Japan", Number = 392, },
+                new Country() { Code = "JE", Code3 = "JEY", ContinentCode = "EU", Name = "Jersey, Bailiwick of", Number = 832, },
+                new Country() { Code = "JO", Code3 = "JOR", ContinentCode = "AS", Name = "Jordan, Hashemite Kingdom of", Number = 400, },
+                new Country() { Code = "KZ", Code3 = "KAZ", ContinentCode = "EU", Name = "Kazakhstan, Republic of", Number = 398, },
+                //new Country() { Code = "KZ", Code3 = "KAZ", ContinentCode = "AS", Name = "Kazakhstan, Republic of", Number = 398, },
+                new Country() { Code = "KE", Code3 = "KEN", ContinentCode = "AF", Name = "Kenya, Republic of", Number = 404, },
+                new Country() { Code = "KI", Code3 = "KIR", ContinentCode = "OC", Name = "Kiribati, Republic of", Number = 296, },
+                new Country() { Code = "KP", Code3 = "PRK", ContinentCode = "AS", Name = "Korea (Democratic People's Republic of)", Number = 408, },
+                new Country() { Code = "KR", Code3 = "KOR", ContinentCode = "AS", Name = "Korea (Republic of)", Number = 410, },
+                new Country() { Code = "KW", Code3 = "KWT", ContinentCode = "AS", Name = "Kuwait, State of", Number = 414, },
+                new Country() { Code = "KG", Code3 = "KGZ", ContinentCode = "AS", Name = "Kyrgyz Republic", Number = 417, },
+                new Country() { Code = "LA", Code3 = "LAO", ContinentCode = "AS", Name = "Lao People's Democratic Republic", Number = 418, },
+                new Country() { Code = "LV", Code3 = "LVA", ContinentCode = "EU", Name = "Latvia, Republic of", Number = 428, },
+                new Country() { Code = "LB", Code3 = "LBN", ContinentCode = "AS", Name = "Lebanon, Lebanese Republic", Number = 422, },
+                new Country() { Code = "LS", Code3 = "LSO", ContinentCode = "AF", Name = "Lesotho, Kingdom of", Number = 426, },
+                new Country() { Code = "LR", Code3 = "LBR", ContinentCode = "AF", Name = "Liberia, Republic of", Number = 430, },
+                new Country() { Code = "LY", Code3 = "LBY", ContinentCode = "AF", Name = "Libyan Arab Jamahiriya", Number = 434, },
+                new Country() { Code = "LI", Code3 = "LIE", ContinentCode = "EU", Name = "Liechtenstein, Principality of", Number = 438, },
+                new Country() { Code = "LT", Code3 = "LTU", ContinentCode = "EU", Name = "Lithuania, Republic of", Number = 440, },
+                new Country() { Code = "LU", Code3 = "LUX", ContinentCode = "EU", Name = "Luxembourg, Grand Duchy of", Number = 442, },
+                new Country() { Code = "MO", Code3 = "MAC", ContinentCode = "AS", Name = "Macao, Special Administrative Region of China", Number = 446, },
+                new Country() { Code = "MK", Code3 = "MKD", ContinentCode = "EU", Name = "Macedonia, The Former Yugoslav Republic of", Number = 807, },
+                new Country() { Code = "MG", Code3 = "MDG", ContinentCode = "AF", Name = "Madagascar, Republic of", Number = 450, },
+                new Country() { Code = "MW", Code3 = "MWI", ContinentCode = "AF", Name = "Malawi, Republic of", Number = 454, },
+                new Country() { Code = "MY", Code3 = "MYS", ContinentCode = "AS", Name = "Malaysia", Number = 458, },
+                new Country() { Code = "MV", Code3 = "MDV", ContinentCode = "AS", Name = "Maldives, Republic of", Number = 462, },
+                new Country() { Code = "ML", Code3 = "MLI", ContinentCode = "AF", Name = "Mali, Republic of", Number = 466, },
+                new Country() { Code = "MT", Code3 = "MLT", ContinentCode = "EU", Name = "Malta, Republic of", Number = 470, },
+                new Country() { Code = "MH", Code3 = "MHL", ContinentCode = "OC", Name = "Marshall Islands, Republic of the", Number = 584, },
+                new Country() { Code = "MQ", Code3 = "MTQ", ContinentCode = "NA", Name = "Martinique", Number = 474, },
+                new Country() { Code = "MR", Code3 = "MRT", ContinentCode = "AF", Name = "Mauritania, Islamic Republic of", Number = 478, },
+                new Country() { Code = "MU", Code3 = "MUS", ContinentCode = "AF", Name = "Mauritius, Republic of", Number = 480, },
+                new Country() { Code = "YT", Code3 = "MYT", ContinentCode = "AF", Name = "Mayotte", Number = 175, },
+                new Country() { Code = "MX", Code3 = "MEX", ContinentCode = "NA", Name = "Mexico, United Mexican States", Number = 484, },
+                new Country() { Code = "FM", Code3 = "FSM", ContinentCode = "OC", Name = "Micronesia, Federated States of", Number = 583, },
+                new Country() { Code = "MD", Code3 = "MDA", ContinentCode = "EU", Name = "Moldova, Republic of", Number = 498, },
+                new Country() { Code = "MC", Code3 = "MCO", ContinentCode = "EU", Name = "Monaco, Principality of", Number = 492, },
+                new Country() { Code = "MN", Code3 = "MNG", ContinentCode = "AS", Name = "Mongolia", Number = 496, },
+                new Country() { Code = "ME", Code3 = "MNE", ContinentCode = "EU", Name = "Montenegro, Republic of", Number = 499, },
+                new Country() { Code = "MS", Code3 = "MSR", ContinentCode = "NA", Name = "Montserrat", Number = 500, },
+                new Country() { Code = "MA", Code3 = "MAR", ContinentCode = "AF", Name = "Morocco, Kingdom of", Number = 504, },
+                new Country() { Code = "MZ", Code3 = "MOZ", ContinentCode = "AF", Name = "Mozambique, Republic of", Number = 508, },
+                new Country() { Code = "MM", Code3 = "MMR", ContinentCode = "AS", Name = "Myanmar, Union of", Number = 104, },
+                new Country() { Code = "NA", Code3 = "NAM", ContinentCode = "AF", Name = "Namibia, Republic of", Number = 516, },
+                new Country() { Code = "NR", Code3 = "NRU", ContinentCode = "OC", Name = "Nauru, Republic of", Number = 520, },
+                new Country() { Code = "NP", Code3 = "NPL", ContinentCode = "AS", Name = "Nepal, State of", Number = 524, },
+                new Country() { Code = "AN", Code3 = "ANT", ContinentCode = "NA", Name = "Netherlands Antilles", Number = 530, },
+                new Country() { Code = "NL", Code3 = "NLD", ContinentCode = "EU", Name = "Netherlands, Kingdom of the", Number = 528, },
+                new Country() { Code = "NC", Code3 = "NCL", ContinentCode = "OC", Name = "New Caledonia", Number = 540, },
+                new Country() { Code = "NZ", Code3 = "NZL", ContinentCode = "OC", Name = "New Zealand", Number = 554, },
+                new Country() { Code = "NI", Code3 = "NIC", ContinentCode = "NA", Name = "Nicaragua, Republic of", Number = 558, },
+                new Country() { Code = "NE", Code3 = "NER", ContinentCode = "AF", Name = "Niger, Republic of", Number = 562, },
+                new Country() { Code = "NG", Code3 = "NGA", ContinentCode = "AF", Name = "Nigeria, Federal Republic of", Number = 566, },
+                new Country() { Code = "NU", Code3 = "NIU", ContinentCode = "OC", Name = "Niue", Number = 570, },
+                new Country() { Code = "NF", Code3 = "NFK", ContinentCode = "OC", Name = "Norfolk Island", Number = 574, },
+                new Country() { Code = "MP", Code3 = "MNP", ContinentCode = "OC", Name = "Northern Mariana Islands, Commonwealth of the", Number = 580, },
+                new Country() { Code = "NO", Code3 = "NOR", ContinentCode = "EU", Name = "Norway, Kingdom of", Number = 578, },
+                new Country() { Code = "OM", Code3 = "OMN", ContinentCode = "AS", Name = "Oman, Sultanate of", Number = 512, },
+                new Country() { Code = "PK", Code3 = "PAK", ContinentCode = "AS", Name = "Pakistan, Islamic Republic of", Number = 586, },
+                new Country() { Code = "PW", Code3 = "PLW", ContinentCode = "OC", Name = "Palau, Republic of", Number = 585, },
+                new Country() { Code = "PS", Code3 = "PSE", ContinentCode = "AS", Name = "Palestinian Territory, Occupied", Number = 275, },
+                new Country() { Code = "PA", Code3 = "PAN", ContinentCode = "NA", Name = "Panama, Republic of", Number = 591, },
+                new Country() { Code = "PG", Code3 = "PNG", ContinentCode = "OC", Name = "Papua New Guinea, Independent State of", Number = 598, },
+                new Country() { Code = "PY", Code3 = "PRY", ContinentCode = "SA", Name = "Paraguay, Republic of", Number = 600, },
+                new Country() { Code = "PE", Code3 = "PER", ContinentCode = "SA", Name = "Peru, Republic of", Number = 604, },
+                new Country() { Code = "PH", Code3 = "PHL", ContinentCode = "AS", Name = "Philippines, Republic of the", Number = 608, },
+                new Country() { Code = "PN", Code3 = "PCN", ContinentCode = "OC", Name = "Pitcairn Islands", Number = 612, },
+                new Country() { Code = "PL", Code3 = "POL", ContinentCode = "EU", Name = "Poland, Republic of", Number = 616, },
+                new Country() { Code = "PT", Code3 = "PRT", ContinentCode = "EU", Name = "Portugal, Portuguese Republic", Number = 620, },
+                new Country() { Code = "PR", Code3 = "PRI", ContinentCode = "NA", Name = "Puerto Rico, Commonwealth of", Number = 630, },
+                new Country() { Code = "QA", Code3 = "QAT", ContinentCode = "AS", Name = "Qatar, State of", Number = 634, },
+                new Country() { Code = "RE", Code3 = "REU", ContinentCode = "AF", Name = "Reunion", Number = 638, },
+                new Country() { Code = "RO", Code3 = "ROU", ContinentCode = "EU", Name = "Romania", Number = 642, },
+                new Country() { Code = "RU", Code3 = "RUS", ContinentCode = "EU", Name = "Russian Federation", Number = 643, },
+                //new Country() { Code = "RU", Code3 = "RUS", ContinentCode = "AS", Name = "Russian Federation", Number = 643, },
+                new Country() { Code = "RW", Code3 = "RWA", ContinentCode = "AF", Name = "Rwanda, Republic of", Number = 646, },
+                new Country() { Code = "BL", Code3 = "BLM", ContinentCode = "NA", Name = "Saint Barthelemy", Number = 652, },
+                new Country() { Code = "SH", Code3 = "SHN", ContinentCode = "AF", Name = "Saint Helena", Number = 654, },
+                new Country() { Code = "KN", Code3 = "KNA", ContinentCode = "NA", Name = "Saint Kitts and Nevis, Federation of", Number = 659, },
+                new Country() { Code = "LC", Code3 = "LCA", ContinentCode = "NA", Name = "Saint Lucia", Number = 662, },
+                new Country() { Code = "MF", Code3 = "MAF", ContinentCode = "NA", Name = "Saint Martin", Number = 663, },
+                new Country() { Code = "PM", Code3 = "SPM", ContinentCode = "NA", Name = "Saint Pierre and Miquelon", Number = 666, },
+                new Country() { Code = "VC", Code3 = "VCT", ContinentCode = "NA", Name = "Saint Vincent and the Grenadines", Number = 670, },
+                new Country() { Code = "WS", Code3 = "WSM", ContinentCode = "OC", Name = "Samoa, Independent State of", Number = 882, },
+                new Country() { Code = "SM", Code3 = "SMR", ContinentCode = "EU", Name = "San Marino, Republic of", Number = 674, },
+                new Country() { Code = "ST", Code3 = "STP", ContinentCode = "AF", Name = "Sao Tome and Principe, Democratic Republic of", Number = 678, },
+                new Country() { Code = "SA", Code3 = "SAU", ContinentCode = "AS", Name = "Saudi Arabia, Kingdom of", Number = 682, },
+                new Country() { Code = "SN", Code3 = "SEN", ContinentCode = "AF", Name = "Senegal, Republic of", Number = 686, },
+                new Country() { Code = "RS", Code3 = "SRB", ContinentCode = "EU", Name = "Serbia, Republic of", Number = 688, },
+                new Country() { Code = "SC", Code3 = "SYC", ContinentCode = "AF", Name = "Seychelles, Republic of", Number = 690, },
+                new Country() { Code = "SL", Code3 = "SLE", ContinentCode = "AF", Name = "Sierra Leone, Republic of", Number = 694, },
+                new Country() { Code = "SG", Code3 = "SGP", ContinentCode = "AS", Name = "Singapore, Republic of", Number = 702, },
+                new Country() { Code = "SX", Code3 = "SXM", ContinentCode = "NA", Name = "Sint Maarten (Netherlands)", Number = 534, },
+                new Country() { Code = "SK", Code3 = "SVK", ContinentCode = "EU", Name = "Slovakia (Slovak Republic)", Number = 703, },
+                new Country() { Code = "SI", Code3 = "SVN", ContinentCode = "EU", Name = "Slovenia, Republic of", Number = 705, },
+                new Country() { Code = "SB", Code3 = "SLB", ContinentCode = "OC", Name = "Solomon Islands", Number = 90, },
+                new Country() { Code = "SO", Code3 = "SOM", ContinentCode = "AF", Name = "Somalia, Somali Republic", Number = 706, },
+                new Country() { Code = "ZA", Code3 = "ZAF", ContinentCode = "AF", Name = "South Africa, Republic of", Number = 710, },
+                new Country() { Code = "GS", Code3 = "SGS", ContinentCode = "AN", Name = "South Georgia and the South Sandwich Islands", Number = 239, },
+                new Country() { Code = "SS", Code3 = "SSD", ContinentCode = "AF", Name = "South Sudan", Number = 728, },
+                new Country() { Code = "ES", Code3 = "ESP", ContinentCode = "EU", Name = "Spain, Kingdom of", Number = 724, },
+                new Country() { Code = "LK", Code3 = "LKA", ContinentCode = "AS", Name = "Sri Lanka, Democratic Socialist Republic of", Number = 144, },
+                new Country() { Code = "SD", Code3 = "SDN", ContinentCode = "AF", Name = "Sudan, Republic of", Number = 736, },
+                new Country() { Code = "SR", Code3 = "SUR", ContinentCode = "SA", Name = "Suriname, Republic of", Number = 740, },
+                new Country() { Code = "SJ", Code3 = "SJM", ContinentCode = "EU", Name = "Svalbard & Jan Mayen Islands", Number = 744, },
+                new Country() { Code = "SZ", Code3 = "SWZ", ContinentCode = "AF", Name = "Swaziland, Kingdom of", Number = 748, },
+                new Country() { Code = "SE", Code3 = "SWE", ContinentCode = "EU", Name = "Sweden, Kingdom of", Number = 752, },
+                new Country() { Code = "CH", Code3 = "CHE", ContinentCode = "EU", Name = "Switzerland, Swiss Confederation", Number = 756, },
+                new Country() { Code = "SY", Code3 = "SYR", ContinentCode = "AS", Name = "Syrian Arab Republic", Number = 760, },
+                new Country() { Code = "TW", Code3 = "TWN", ContinentCode = "AS", Name = "Taiwan", Number = 158, },
+                new Country() { Code = "TJ", Code3 = "TJK", ContinentCode = "AS", Name = "Tajikistan, Republic of", Number = 762, },
+                new Country() { Code = "TZ", Code3 = "TZA", ContinentCode = "AF", Name = "Tanzania, United Republic of", Number = 834, },
+                new Country() { Code = "TH", Code3 = "THA", ContinentCode = "AS", Name = "Thailand, Kingdom of", Number = 764, },
+                new Country() { Code = "TL", Code3 = "TLS", ContinentCode = "AS", Name = "Timor-Leste, Democratic Republic of", Number = 626, },
+                new Country() { Code = "TG", Code3 = "TGO", ContinentCode = "AF", Name = "Togo, Togolese Republic", Number = 768, },
+                new Country() { Code = "TK", Code3 = "TKL", ContinentCode = "OC", Name = "Tokelau", Number = 772, },
+                new Country() { Code = "TO", Code3 = "TON", ContinentCode = "OC", Name = "Tonga, Kingdom of", Number = 776, },
+                new Country() { Code = "TT", Code3 = "TTO", ContinentCode = "NA", Name = "Trinidad and Tobago, Republic of", Number = 780, },
+                new Country() { Code = "TN", Code3 = "TUN", ContinentCode = "AF", Name = "Tunisia, Tunisian Republic", Number = 788, },
+                new Country() { Code = "TR", Code3 = "TUR", ContinentCode = "EU", Name = "Turkey, Republic of", Number = 792, },
+                //new Country() { Code = "TR", Code3 = "TUR", ContinentCode = "AS", Name = "Turkey, Republic of", Number = 792, },
+                new Country() { Code = "TM", Code3 = "TKM", ContinentCode = "AS", Name = "Turkmenistan", Number = 795, },
+                new Country() { Code = "TC", Code3 = "TCA", ContinentCode = "NA", Name = "Turks and Caicos Islands", Number = 796, },
+                new Country() { Code = "TV", Code3 = "TUV", ContinentCode = "OC", Name = "Tuvalu", Number = 798, },
+                new Country() { Code = "UG", Code3 = "UGA", ContinentCode = "AF", Name = "Uganda, Republic of", Number = 800, },
+                new Country() { Code = "UA", Code3 = "UKR", ContinentCode = "EU", Name = "Ukraine", Number = 804, },
+                new Country() { Code = "AE", Code3 = "ARE", ContinentCode = "AS", Name = "United Arab Emirates", Number = 784, },
+                new Country() { Code = "GB", Code3 = "GBR", ContinentCode = "EU", Name = "United Kingdom of Great Britain & Northern Ireland", Number = 826, },
+                new Country() { Code = "UM", Code3 = "UMI", ContinentCode = "OC", Name = "United States Minor Outlying Islands", Number = 581, },
+                //new Country() { Code = "UM", Code3 = "UMI", ContinentCode = "NA", Name = "United States Minor Outlying Islands", Number = 581, },
+                new Country() { Code = "US", Code3 = "USA", ContinentCode = "NA", Name = "United States of America", Number = 840, },
+                new Country() { Code = "VI", Code3 = "VIR", ContinentCode = "NA", Name = "United States Virgin Islands", Number = 850, },
+                new Country() { Code = "UY", Code3 = "URY", ContinentCode = "SA", Name = "Uruguay, Eastern Republic of", Number = 858, },
+                new Country() { Code = "UZ", Code3 = "UZB", ContinentCode = "AS", Name = "Uzbekistan, Republic of", Number = 860, },
+                new Country() { Code = "VU", Code3 = "VUT", ContinentCode = "OC", Name = "Vanuatu, Republic of", Number = 548, },
+                new Country() { Code = "VE", Code3 = "VEN", ContinentCode = "SA", Name = "Venezuela, Bolivarian Republic of", Number = 862, },
+                new Country() { Code = "VN", Code3 = "VNM", ContinentCode = "AS", Name = "Vietnam, Socialist Republic of", Number = 704, },
+                new Country() { Code = "WF", Code3 = "WLF", ContinentCode = "OC", Name = "Wallis and Futuna", Number = 876, },
+                new Country() { Code = "EH", Code3 = "ESH", ContinentCode = "AF", Name = "Western Sahara", Number = 732, },
+                new Country() { Code = "YE", Code3 = "YEM", ContinentCode = "AS", Name = "Yemen", Number = 887, },
+                new Country() { Code = "ZM", Code3 = "ZMB", ContinentCode = "AF", Name = "Zambia, Republic of", Number = 894, },
+                new Country() { Code = "ZW", Code3 = "ZWE", ContinentCode = "AF", Name = "Zimbabwe, Republic of", Number = 716, },
+            };
+        }
+
+        public static List<Country> SelectList()
+        {
+            return countryList;
+        }
+
+        public static Country Select(string code)
+        {
+            return countryList.Find(x => x.Code == code);
+        }
+
+    }
+}
+

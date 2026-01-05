@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Countries" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\countries.json.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Blob" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\sql\blob.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\config.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Domain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\domain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Event" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\event.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000EventUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\eventuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000FlexibleColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\flexiblecolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000FlexibleEntity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\flexibleentity.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000FlexibleEntityColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\flexibleentitycolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000FlexibleEntityColumnInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\flexibleentitycolumninstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000FlexibleEntityInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\flexibleentityinstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Follower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\follower.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Issue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\issue.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000LogEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\logentry.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\notification.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Remark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\remark.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000RemarkUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\remarkuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Role" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\role.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000RoleFunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\rolefunction.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000Task" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\task.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000TaskUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\taskuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\user.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000UserDomain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\userdomain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql000UserRole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\userrole.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\config.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Domain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\domain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Event" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\event.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001EventUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\eventuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001FlexibleColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\01\flexiblecolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001FlexibleEntity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\01\flexibleentity.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001FlexibleEntityColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\01\flexibleentitycolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001FlexibleEntityColumnInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\01\flexibleentitycolumninstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001FlexibleEntityInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\01\flexibleentityinstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Follower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\follower.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Issue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\issue.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001LogEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\logentry.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\notification.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Remark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\remark.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001RemarkUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\remarkuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Role" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\role.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001RoleFunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\rolefunction.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001Task" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\task.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001TaskUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\01\taskuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\user.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001UserDomain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\userdomain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql001UserRole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\01\userrole.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Blob" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\sql\03\blob.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\config.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Domain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\domain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Event" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\event.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003EventUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\eventuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003FlexibleColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\03\flexiblecolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003FlexibleEntity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\03\flexibleentity.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003FlexibleEntityColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\03\flexibleentitycolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003FlexibleEntityColumnInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\03\flexibleentitycolumninstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003FlexibleEntityInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\03\flexibleentityinstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Follower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\follower.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Issue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\issue.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003LogEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\logentry.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\notification.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Remark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\remark.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003RemarkUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\remarkuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Role" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\role.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003RoleFunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\rolefunction.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003Task" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\task.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003TaskUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\03\taskuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\user.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003UserDomain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\userdomain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql003UserRole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\03\userrole.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\config.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Domain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\domain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Event" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\event.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004EventUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\eventuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004FlexibleColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\04\flexiblecolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004FlexibleEntity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\04\flexibleentity.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004FlexibleEntityColumn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\04\flexibleentitycolumn.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004FlexibleEntityColumnInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\04\flexibleentitycolumninstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004FlexibleEntityInstance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\flexibleentities\t4\sql\04\flexibleentityinstance.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Follower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\follower.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Issue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\issue.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004LogEntry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\logentry.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\notification.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Remark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\remark.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004RemarkUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\remarkuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Role" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\role.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004RoleFunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\rolefunction.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004Task" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\task.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004TaskUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\social\t4\sql\04\taskuser.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\user.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004UserDomain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\userdomain.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Sql004UserRole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\t4\sql\04\userrole.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+</root>
