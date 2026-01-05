@@ -7,7 +7,7 @@ namespace com.fabioscagliola.Core.DataAccess.FlexibleEntities
     {
         public string Type { get; set; }
 
-        public override void Delete(Milieu milieu, System.Data.SqlClient.SqlTransaction transaction, bool permanently)
+        public override void Delete(Milieu milieu, Microsoft.Data.SqlClient.SqlTransaction transaction, bool permanently)
         {
             if (FlexibleEntityColumn.SelectList(milieu).Exists(x => x.FlexibleColumnId == Id))
             {

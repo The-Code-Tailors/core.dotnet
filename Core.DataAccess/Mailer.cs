@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 using System.Net.Mail;
+using com.fabioscagliola.Core.Data;
 
 namespace com.fabioscagliola.Core.DataAccess
 {
@@ -44,12 +45,11 @@ namespace com.fabioscagliola.Core.DataAccess
 
         public static Mailer CreateDefaultInstance()
         {
-            AppSettingsReader appSettingsReader = new AppSettingsReader();
-            string host = (string)appSettingsReader.GetValue("SmtpHost", typeof(string));
-            int port = (int)appSettingsReader.GetValue("SmtpPort", typeof(int));
-            string username = (string)appSettingsReader.GetValue("SmtpUsername", typeof(string));
-            string password = (string)appSettingsReader.GetValue("SmtpPassword", typeof(string));
-            bool enableSsl = (bool)appSettingsReader.GetValue("SmtpEnableSsl", typeof(bool));
+            string host = Settings.Instance.Mailer.SmtpHost;
+            int port = Settings.Instance.Mailer.SmtpPort;
+            string username = Settings.Instance.Mailer.SmtpUsername;
+            string password = Settings.Instance.Mailer.SmtpPassword;
+            bool enableSsl = Settings.Instance.Mailer.SmtpEnableSsl;
             return new Mailer(host, port, username, password, enableSsl);
         }
 
