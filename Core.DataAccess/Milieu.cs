@@ -39,23 +39,16 @@ namespace com.fabioscagliola.Core.DataAccess
         {
             get
             {
-                if (_functionList == null)
-                {
-                    _functionList = (List<DataAccessFunction>)SessionCache.GetValue(FUNCTIONLIST);
-                    if (_functionList == null)
-                    {
-                        UserSqlController controller = (UserSqlController)new User().GetDefaultController();
-                        _functionList = controller.SelectFunctionList(domainId, userId);
-                        SessionCache.SetValue(FUNCTIONLIST, _functionList);
-                    }
-                }
+                UserSqlController controller = (UserSqlController)new User().GetDefaultController();
+                _functionList = controller.SelectFunctionList(domainId, userId);
+                // TODO: [dotnet] Cache functions in the session (or somewhere else, for that matter, as long as per user)
                 return _functionList;
             }
         }
 
         public static void FlushCache()
         {
-            SessionCache.FlushCache(FUNCTIONLIST);
+            // TODO: [dotnet] Flush the cache
         }
 
     }

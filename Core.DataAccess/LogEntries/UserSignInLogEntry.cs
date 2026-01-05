@@ -40,13 +40,7 @@ namespace com.fabioscagliola.Core.DataAccess.LogEntries
 
             Date = DateTime.Now;
 
-            if (HttpContext.Current != null)
-            {
-                UserAgent = HttpContext.Current.Request.UserAgent;
-                UserHostAddress = HttpContext.Current.Request.UserHostAddress;
-                UserHostName = HttpContext.Current.Request.UserHostName;
-                UserLanguages = HttpContext.Current.Request.UserLanguages;
-            }
+            // TODO: [dotnet] Initialize UserAgent, UserHostAddress, UserHostName, and UserLanguages based on the HTTP request
         }
 
         protected override Controller GetController(ControllerConfiguration configuration)
