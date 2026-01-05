@@ -8,33 +8,42 @@ public class Settings
 {
     public class EntitySettings
     {
-        public ControllerType ControllerType { get; init; }
+        public ControllerType ControllerType { get; set; }
     }
 
     public class SqlControllerConfigurationSettings
     {
-        public string Hostname { get; init; }
-        public string Username { get; init; }
-        public string Password { get; init; }
-        public string Database { get; init; }
-        public bool EnableDiagnosticMode { get; init; }
+        public string Hostname { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Database { get; set; }
+        public bool EnableDiagnosticMode { get; set; }
     }
 
     public class SqlIntegratedSecurityControllerConfigurationSettings
     {
-        public string Hostname { get; init; }
-        public string Database { get; init; }
-        public bool EnableDiagnosticMode { get; init; }
+        public string Hostname { get; set; }
+        public string Database { get; set; }
+        public bool EnableDiagnosticMode { get; set; }
     }
 
     public class SqlLocalDBControllerConfigurationSettings
     {
-        public string Path { get; init; }
+        public string Path { get; set; }
+    }
+
+    public class MailerSettings
+    {
+        public string SmtpHost { get; set; }
+        public int SmtpPort { get; set; }
+        public string SmtpUsername { get; set; }
+        public string SmtpPassword { get; set; }
+        public bool SmtpEnableSsl { get; set; }
     }
 
     public class XmlControllerConfigurationSettings
     {
-        public string Path { get; init; }
+        public string Path { get; set; }
     }
 
     private static Settings instance;
@@ -54,5 +63,6 @@ public class Settings
     public SqlControllerConfigurationSettings SqlControllerConfiguration { get; set; }
     public SqlIntegratedSecurityControllerConfigurationSettings SqlIntegratedSecurityControllerConfiguration { get; set; }
     public SqlLocalDBControllerConfigurationSettings SqlLocalDBControllerConfiguration { get; set; }
+    public MailerSettings Mailer { get; set; }
     public XmlControllerConfigurationSettings XmlControllerConfiguration { get; set; }
 }
