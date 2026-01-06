@@ -5,6 +5,7 @@
         <IsPackable>false</IsPackable>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
+        <RootNamespace>com.fabioscagliola.Core.Data.Test</RootNamespace>
         <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
 
