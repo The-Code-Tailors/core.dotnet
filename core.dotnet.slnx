@@ -3,4 +3,5 @@
   <Project Path="Core.Data/Core.Data.csproj" />
   <Project Path="Core.DataAccess.Test/Core.DataAccess.Test.csproj" />
   <Project Path="Core.DataAccess/Core.DataAccess.csproj" />
+  <Project Path="Core.Packager/Core.Packager.csproj" />
 </Solution>
