@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyVersion>14.0</AssemblyVersion>
+        <Authors>Fabio Scagliola</Authors>
+        <Copyright>Fabio Scagliola 2012</Copyright>
+        <Description>The Core.Packager library is a wrapper for the ICSharpCode.SharpZipLib library and includes classes that help manipulating ZIP files</Description>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <FileVersion>$(AssemblyVersion)</FileVersion>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+        <Nullable>enable</Nullable>
+        <Product>Core.Packager</Product>
+        <RootNamespace>com.fabioscagliola.Core.Packager</RootNamespace>
+        <TargetFramework>net10.0</TargetFramework>
+        <Title>Core.Packager</Title>
+        <Version>$(AssemblyVersion)</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    </ItemGroup>
+
+</Project>
