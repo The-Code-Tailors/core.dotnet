@@ -1,7 +1,7 @@
 ﻿using com.fabioscagliola.Core.Data;
 using NUnit.Framework;
 
-namespace Core.Data.Test;
+namespace com.fabioscagliola.Core.Data.Test;
 
 public class SettingsTest
 {

@@ -5,7 +5,7 @@
         <IsPackable>false</IsPackable>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
-        <RootNamespace>com.fabioscagliola.Core.Data.Test</RootNamespace>
+        <RootNamespace>com.fabioscagliola.Core.Presentation.Test</RootNamespace>
         <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
 
@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Core.Data\Core.Data.csproj"/>
+        <ProjectReference Include="..\Core.Presentation\Core.Presentation.csproj"/>
     </ItemGroup>
 
     <ItemGroup>

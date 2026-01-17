@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Core.DataAccess.Test;
+namespace com.fabioscagliola.Core.DataAccess.Test;
 
 public class WhateverTest
 {

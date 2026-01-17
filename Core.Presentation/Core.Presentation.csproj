@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyVersion>12.0</AssemblyVersion>
+        <Authors>Fabio Scagliola</Authors>
+        <Copyright>Fabio Scagliola 2013</Copyright>
+        <Description>The Core.Presentation library includes classes that help building the GUI of ASP.NET MVC web applications</Description>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <FileVersion>$(AssemblyVersion)</FileVersion>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+        <Nullable>enable</Nullable>
+        <Product>Core.Presentation</Product>
+        <RootNamespace>com.fabioscagliola.Core.Presentation</RootNamespace>
+        <TargetFramework>net10.0</TargetFramework>
+        <Title>Core.Presentation</Title>
+        <Version>$(AssemblyVersion)</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+    </ItemGroup>
+
+</Project>
